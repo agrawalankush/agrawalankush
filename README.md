@@ -1,6 +1,6 @@
 # Namaste, people :pray:
 
-I do like to code on occasion, it's true! trust me :nerd_face:. Curretly I work on a UI app which is frontend to Energy Management System of the Energy Storage System called TeraStor.
+I do like to code on occasion, it's true! trust me :nerd_face:. Curretly I work on a UI app which is frontend to Energy Management System of the Energy Storage System called [TeraStor](https://www.aesi-ess.com/terastor/).
 
 In my last job I worked with [Mapbox](https://www.mapbox.com/) and [Leaflet](https://github.com/Leaflet/Leaflet) to help increase property tax collection of district bodies; [Jodhpur](https://nnjsouth.in/properties/map) and [Bharatpur](https://udtbharatpurmc.co.in/properties/map) of the state Rajasthan. All of the above projects are using Angular and Angular Material as frontend. 
 
