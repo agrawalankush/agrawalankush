@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "Building a MEAN Stack PWA",
+    "subtitle": "A Journey into Full-Stack Development with MongoDB, Express, Angular, and Node.js",
+    "author": "Ankush Agrawal",
+    "date": "2025-06-10",
+    "coverImage": "https://via.placeholder.com/800x400.png?text=MEAN+Stack+PWA",
+    "tags": ["MEAN Stack", "PWA", "Cloudflare", "Raspberry Pi"],
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "I started this project to build a Progressive Web App for indianolympicdream.com, a platform to inspire Olympic dreams. The tech stack includes MongoDB for the database, Express.js and Node.js for the backend, and Angular for the frontend, all hosted on a Raspberry Pi with Cloudflare Tunnel for secure access."
+      },
+      {
+        "heading": "Challenges",
+        "content": "One major issue was Content Security Policy (CSP) errors due to inline styles. I resolved this by configuring CSP in Nginx and disabling Cloudflare’s automatic CSP settings.",
+        "image": "https://via.placeholder.com/600x300.png?text=CSP+Challenge"
+      },
+      {
+        "heading": "Implementation",
+        "content": "The app uses Docker containers for MongoDB, Express.js, and Nginx, ensuring scalability and easy deployment on the Pi."
+      }
+    ],
+    "conclusion": "This project taught me the intricacies of full-stack development and the importance of security configurations like CSP. The PWA is now live and performing well!"
+  },
+  {
+    "id": "2",
+    "title": "Deploying a Static Tech Blog on GitHub Pages",
+    "subtitle": "A Step-by-Step Guide to Building a Blog with React and Giscus",
+    "author": "Ankush Agrawal",
+    "date": "2025-06-12",
+    "coverImage": "https://via.placeholder.com/800x400.png?text=Tech+Blog+Deployment",
+    "tags": ["React", "GitHub Pages", "Giscus", "Static Site"],
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "In this post, I’ll walk you through setting up a tech blog using React, hosting it on GitHub Pages, and adding comments with Giscus, an open-source solution leveraging GitHub Discussions."
+      },
+      {
+        "heading": "Setup",
+        "content": "The setup involves creating a React app, adding routes with React Router, and styling with Tailwind CSS.",
+        "image": "https://via.placeholder.com/600x300.png?text=React+Setup"
+      },
+      {
+        "heading": "Deployment",
+        "content": "We deploy the blog to the gh-pages branch of the agrawalankush repository, ensuring the main branch keeps the source code and README.md."
+      }
+    ],
+    "conclusion": "This blog setup is minimal, performant, and easy to maintain, making it a great choice for tech enthusiasts looking to share their projects."
+  }
+]
