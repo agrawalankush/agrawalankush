@@ -3,7 +3,37 @@ import { useParams } from 'react-router-dom';
 import postsData from '../data/posts.json'; 
 function Post() {
   const { id } = useParams();
-  const [post, setPost] = useState(postsData.find(p => p.id === id));
+  const [post, setPost] = useState(null);
+
+  useEffect(() => {
+    const selectedPost = postsData.find(p => p.id === id);
+    setPost(selectedPost);
+  }, [id]);
+
+  useEffect(() => {
+    const loadGiscus = () => {
+      if (document.getElementById('giscus-comments')) {
+        const script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.setAttribute('data-repo', 'agrawalankush/agrawalankush');
+        script.setAttribute('data-repo-id', 'R_kgDOGIV5oQ');
+        script.setAttribute('data-category', 'Comments');
+        script.setAttribute('data-category-id', 'DIC_kwDOGIV5oc4Crc5I');
+        script.setAttribute('data-mapping', 'pathname');
+        script.setAttribute('data-strict', '0');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '0');
+        script.setAttribute('data-input-position', 'bottom');
+        script.setAttribute('data-theme', 'light');
+        script.setAttribute('data-lang', 'en');
+        script.setAttribute('crossOrigin', 'anonymous');
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    };
+    window.addEventListener('scroll', loadGiscus, { once: true });
+    return () => window.removeEventListener('scroll', loadGiscus);
+  }, []);
 
   if (!post) return <div className="container mx-auto p-4">Loading...</div>;
 
@@ -32,21 +62,6 @@ function Post() {
         <p className="text-gray-700">{post.conclusion}</p>
       </div>
       <div id="giscus-comments" className="mt-8"></div>
-      <script src="https://giscus.app/client.js"
-        data-repo="agrawalankush/agrawalankush"
-        data-repo-id="R_kgDOGIV5oQ"
-        data-category="Comments"
-        data-category-id="DIC_kwDOGIV5oc4Crc5I"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossOrigin="anonymous"
-        async>
-      </script>
     </div>
   );
 }
